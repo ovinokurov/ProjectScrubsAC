@@ -67,7 +67,7 @@ namespace ProjectScrubsAC.Controllers
                     sysUser.Password = encrpPass;
                     sysUser.PasswordSalt = crypto.Salt;
                     sysUser.UserId = Guid.NewGuid();
-                    //can be done here or in DB one more change.
+                    //can be done here or in DB one more change. last change
                     sysUser.isActive = true;
                     db.SystemUsers.Add(sysUser);
                     db.SaveChanges();
