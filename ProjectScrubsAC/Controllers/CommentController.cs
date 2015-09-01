@@ -56,6 +56,7 @@ namespace ProjectScrubsAC.Controllers
                 db.Comments.Add(comment);
                 db.SaveChanges();
                 return RedirectToAction("Index");
+
             }
 
             return View(comment);
