@@ -17,5 +17,6 @@ namespace ProjectScrubsAC
         public System.Guid Id { get; set; }
         public string Email { get; set; }
         public string UserComment { get; set; }
+        public System.DateTime Date { get; set; }
     }
 }

@@ -17,7 +17,8 @@ namespace ProjectScrubsAC.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Comments.ToList());
+            return View(db.Comments.OrderBy(dt => dt.Date).ToList());
+            //return View(db.Comments.ToList());
         }
 
         //
@@ -51,6 +52,7 @@ namespace ProjectScrubsAC.Controllers
             if (ModelState.IsValid)
             {
                 comment.Id = Guid.NewGuid();
+                comment.Date = DateTime.Now;
                 db.Comments.Add(comment);
                 db.SaveChanges();
                 return RedirectToAction("Index");

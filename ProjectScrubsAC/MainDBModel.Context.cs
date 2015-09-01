@@ -25,7 +25,7 @@ namespace ProjectScrubsAC
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Comment> Comments { get; set; }
         public DbSet<SystemUser> SystemUsers { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }
